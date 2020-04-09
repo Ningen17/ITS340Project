@@ -1,0 +1,251 @@
+public class PatientDemo {
+    private String patientID, ptLastName, ptPreviousLastName, ptFirstName, homeAddress1, homeAddress2, homeCity, homeState, homePostalCode, country, citizen, ptHomePhone, emergencyContactPhone, email, ptSocial, dOBDateTime, gender, ethnicity, maritalStatus, currentPrimaryHCPID, sexualActive, comments, subRelation, nextOfKin, ptMidInit, nOKRelation;
+
+    public PatientDemo() {
+
+    }
+
+    public PatientDemo(String ptID, String ptLN, String ptFN, String ptNum) {
+        this.patientID = ptID;
+        this.ptLastName = ptLN;
+        this.ptFirstName = ptFN;
+        this.ptHomePhone = ptNum;
+    }
+
+    public PatientDemo(String ptID, String ptLN, String ptPreviousLN, String ptFN, String ptAddress1, String ptAddress2, String ptCity, String ptState, String ptPostal, String ptCountry, String ptCitizen, String ptNum, String ptEmergencyNum, String ptEmail, String ptSocialNum, String ptBirthDate, String ptGender, String ptEthnicity, String ptMarital, String ptCurrentHealthProviderID, String ptSexualActive, String ptComments, String ptSubRelationship, String ptNOK, String ptMiddleInitial, String ptNOKRealation) {
+        this.patientID = ptID;
+        this.ptLastName = ptLN;
+        this.ptPreviousLastName = ptPreviousLN;
+        this.ptFirstName = ptFN;
+        this.homeAddress1 = ptAddress1;
+        this.homeAddress2 = ptAddress2;
+        this.homeCity = ptCity;
+        this.homeState = ptState;
+        this.homePostalCode = ptPostal;
+        this.country = ptCountry;
+        this.citizen = ptCitizen;
+        this.ptHomePhone = ptNum;
+        this.emergencyContactPhone = ptEmergencyNum;
+        this.email = ptEmail;
+        this.ptSocial = ptSocialNum;
+        this.dOBDateTime = ptBirthDate;
+        this.gender = ptGender;
+        this.ethnicity = ptEthnicity;
+        this.maritalStatus = ptMarital;
+        this.currentPrimaryHCPID = ptCurrentHealthProviderID;
+        this.sexualActive = ptSexualActive;
+        this.comments = ptComments;
+        this.subRelation = ptSubRelationship;
+        this.nextOfKin = ptNOK;
+        this.ptMidInit = ptMiddleInitial;
+        this.nOKRelation = ptNOKRealation;
+    }
+
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
+    }
+
+    public void setPtLastName(String ptLastName) {
+        this.ptLastName = ptLastName;
+    }
+
+    public String getCitizen() {
+        return citizen;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getCurrentPrimaryHCPID() {
+        return currentPrimaryHCPID;
+    }
+
+    public String getdOBDateTime() {
+        return dOBDateTime;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getEmergencyContactPhone() {
+        return emergencyContactPhone;
+    }
+
+    public String getEthnicity() {
+        return ethnicity;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getHomeAddress1() {
+        return homeAddress1;
+    }
+
+    public String getHomeAddress2() {
+        return homeAddress2;
+    }
+
+    public String getHomeCity() {
+        return homeCity;
+    }
+
+    public String getHomePostalCode() {
+        return homePostalCode;
+    }
+
+    public String getHomeState() {
+        return homeState;
+    }
+
+    public String getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public String getNextOfKin() {
+        return nextOfKin;
+    }
+
+    public String getnOKRelation() {
+        return nOKRelation;
+    }
+
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public String getPtFirstName() {
+        return ptFirstName;
+    }
+
+    public String getPtHomePhone() {
+        return ptHomePhone;
+    }
+
+    public String getPtLastName() {
+        return ptLastName;
+    }
+
+    public String getPtMidInit() {
+        return ptMidInit;
+    }
+
+    public String getPtPreviousLastName() {
+        return ptPreviousLastName;
+    }
+
+    public String getPtSocial() {
+        return ptSocial;
+    }
+
+    public String getSexualActive() {
+        return sexualActive;
+    }
+
+    public String getSubRelation() {
+        return subRelation;
+    }
+
+    public void setCitizen(String citizen) {
+        this.citizen = citizen;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setCurrentPrimaryHCPID(String currentPrimaryHCPID) {
+        this.currentPrimaryHCPID = currentPrimaryHCPID;
+    }
+
+    public void setdOBDateTime(String dOBDateTime) {
+        this.dOBDateTime = dOBDateTime;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setEmergencyContactPhone(String emergencyContactPhone) {
+        this.emergencyContactPhone = emergencyContactPhone;
+    }
+
+    public void setEthnicity(String ethnicity) {
+        this.ethnicity = ethnicity;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setHomeAddress1(String homeAddress1) {
+        this.homeAddress1 = homeAddress1;
+    }
+
+    public void setHomeAddress2(String homeAddress2) {
+        this.homeAddress2 = homeAddress2;
+    }
+
+    public void setHomeCity(String homeCity) {
+        this.homeCity = homeCity;
+    }
+
+    public void setHomePostalCode(String homePostalCode) {
+        this.homePostalCode = homePostalCode;
+    }
+
+    public void setHomeState(String homeState) {
+        this.homeState = homeState;
+    }
+
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public void setNextOfKin(String nextOfKin) {
+        this.nextOfKin = nextOfKin;
+    }
+
+    public void setPtFirstName(String ptFirstName) {
+        this.ptFirstName = ptFirstName;
+    }
+
+    public void setnOKRelation(String nOKRelation) {
+        this.nOKRelation = nOKRelation;
+    }
+
+    public void setPtHomePhone(String ptHomePhone) {
+        this.ptHomePhone = ptHomePhone;
+    }
+
+    public void setPtMidInit(String ptMidInit) {
+        this.ptMidInit = ptMidInit;
+    }
+
+    public void setPtPreviousLastName(String ptPreviousLastName) {
+        this.ptPreviousLastName = ptPreviousLastName;
+    }
+
+    public void setPtSocial(String ptSocial) {
+        this.ptSocial = ptSocial;
+    }
+
+    public void setSexualActive(String sexualActive) {
+        this.sexualActive = sexualActive;
+    }
+
+    public void setSubRelation(String subRelation) {
+        this.subRelation = subRelation;
+    }
+}
