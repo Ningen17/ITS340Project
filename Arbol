@@ -1,0 +1,57 @@
+//Binary tree
+
+import java.util.*;
+
+public class Arbol<T> {
+	private Node root;
+	
+	public Arbol() {
+		root = null;
+	}
+	
+	public T data = null;
+	
+	private List<Arbol> branches = new ArrayList<>();
+	private Tree stump = null;
+	
+	public Arbol(T data) {
+		this.data = data;
+	}
+	
+	public void addbranch(Arbol branch) {
+		branch.setStump(this);
+		this.branches.add(branch);
+	}
+	
+	public void addChild(T data) {
+		Arbol<T> newBranch = new Arbol<>(data);
+		newBranch.setStump(this);
+		branches.add(newBranch);
+	}
+	
+	public void addBranches(List<Arbol> branches) {
+		for(Arbol t : branches) {
+			t,setStump(this);
+		}
+		this.branches.addAll(branches);
+	}
+	
+	public List<Tree> getBranches() {
+		return branches;
+	}
+	
+	public T getData() {
+	 return data;
+	}
+	
+	public void setData(T data) {
+		this.data = data;
+	}
+	
+	private void setStump(Arbol stump) {
+		this.stump = stump;
+	}
+	
+	public Arbol getStump() {
+		return stump;
+	}
