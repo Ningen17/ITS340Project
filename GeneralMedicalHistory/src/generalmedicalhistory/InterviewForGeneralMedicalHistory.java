@@ -194,7 +194,10 @@ public class InterviewForGeneralMedicalHistory extends JFrame implements ActionL
     }
     
     private void saveButtonClicked(){
-        System.exit(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/genmedhxproject?autoReconnect=true&useSSL=false";
+        String query = "insert into genmedicalhistorytable "
+                + "(GeneralMedicalHistoryID, PatientID, Tobacco, Quantity, Tobaccoduration, Alcohol, AlcoholQuantity, Alcoholduration, Drug, DrugType, Drugduration, BloodType, Rh)"
+                + " values ('0', '0', 'No', '0', 'Never', 'Yes', '5', '0', 'No', 'None', 'None', 'O+', 'Positive')";
     }
     
     private void deleteButtonClicked(){
