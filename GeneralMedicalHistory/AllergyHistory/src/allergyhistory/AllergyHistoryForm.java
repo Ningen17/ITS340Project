@@ -32,9 +32,6 @@ public class AllergyHistoryForm extends JFrame {
         initComponents();
     }
     
-    // CREATE ANOTHER CONSTRUCTOR FOR PID
-    
-    
     // To start, it sets the look and feel for the frame so it's the same as the current operating system.
     private void initComponents(){
         try{
@@ -67,8 +64,6 @@ public class AllergyHistoryForm extends JFrame {
         JButton saveButton = new JButton("Save");
         JButton deleteButton = new JButton("Delete");
         JButton closeButton = new JButton("Close");
-        JButton generalMedicalHistoryButton = new JButton("General Medical History");
-        JButton patientDemographicsButton = new JButton("Patient Demographics");
         
         // To add these action listeners, this code uses lambda expressions.
         editButton.addActionListener(e -> editButtonClicked());
@@ -76,8 +71,6 @@ public class AllergyHistoryForm extends JFrame {
         saveButton.addActionListener(e -> saveButtonClicked());
         deleteButton.addActionListener(e -> deleteButtonClicked());
         closeButton.addActionListener(e -> closeButtonClicked());
-        generalMedicalHistoryButton.addActionListener(e -> generalMedicalHistoryButtonClicked());
-        patientDemographicsButton.addActionListener(e -> patientDemographicsButtonClicked());
         
         // Button panel.
         // After creating the buttons, it creates a panel to contain these buttons.
@@ -89,8 +82,6 @@ public class AllergyHistoryForm extends JFrame {
         buttonPanel.add(saveButton);
         buttonPanel.add(deleteButton);
         buttonPanel.add(closeButton);
-        buttonPanel.add(generalMedicalHistoryButton);
-        buttonPanel.add(patientDemographicsButton);
         
         // Main panel.
         // After creating the panel for the buttons, this code creates another JPanel to store the labels and text boxes for this GUI.
@@ -170,12 +161,7 @@ public class AllergyHistoryForm extends JFrame {
     // The saveButtonClicked() method is the event handler for the action event of the Save button.
     // In other words, it's executed when the Save button is clicked.
     private void saveButtonClicked(){
-         String dbUrl = "jdbc:mysql://localhost:3306/genmedhxproject?autoReconnect=true&useSSL=false";
-          String query = "insert into allergyhistorytable "
-                     + "(AllergyID, PatientID, Allergen, AllergyStartDate, AllergyEndDate, AllergyDescripttion)"
-                     + " values ('0', '0', 'Legumes', 'Birth', 'N/A', 'Patient is allergic to all types of legumes.')";
-          
-          
+        System.exit(0);
     }
     
     // The deleteButtonClicked() method is the event handler for the action event of the Delete button.
@@ -190,43 +176,11 @@ public class AllergyHistoryForm extends JFrame {
         System.exit(0);
     }
     
-    private void generalMedicalHistoryButtonClicked(){
-        InterviewForGeneralMedicalHistory genMedHX = new InterviewForGeneralMedicalHistory();
-        genMedHX.setVisible(true);
-    }
-    
-    private void patientDemographicsButtonClicked(){
-        PatientDemographics patDem = new PatientDemographics();
-        patDem.setVisible(true);
-    }
-    
     // The main() method contains the code that creates a thread that creates the AllergyHistoryForm object and adds it the event queue that's used by the event dispatcher thread (EDT).
     public static void main(String[] args){
         // Here, the code uses a lambda expression to do that.
         java.awt.EventQueue.invokeLater(() -> {
             JFrame frame = new AllergyHistoryForm();
         });
-        
-        String dbUrl = "jdbc:mysql://localhost:3306/genmedhxproject?autoReconnect=true&useSSL=false";
-    }
-
-    private static class InterviewForGeneralMedicalHistory {
-
-        public InterviewForGeneralMedicalHistory() {
-        }
-
-        private void setVisible(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-    }
-
-    private static class PatientDemographics {
-
-        public PatientDemographics() {
-        }
-
-        private void setVisible(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
     }
 }
